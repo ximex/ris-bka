@@ -1,0 +1,35 @@
+{
+  "name": "ris-bka",
+  "version": "0.0.1",
+  "description": "Javascript lib for request to ris.bka.gv.at",
+  "main": "index.js",
+  "keywords": [
+    "RIS",
+    "BKA",
+    "Bundeskanzleramt",
+    "Rechtsinformationssystem",
+    "Österreich",
+    "Austria",
+    "Bund",
+    "Recht",
+    "konsolidiert",
+    "Gesetz"
+  ],
+  "author": {
+    "name": "Thomas Rupprecht",
+    "email": "rupprecht.thomas+git@gmail.com"
+  },
+  "contributors": [
+    {
+      "name": "Thomas Rupprecht",
+      "email": "rupprecht.thomas+git@gmail.com",
+      "url": "http://blog.ximex.at/"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ximex/ris-bka.git"
+  },
+  "bugs": "https://github.com/ximex/ris-bka/issues",
+  "license": "MIT"
+}
