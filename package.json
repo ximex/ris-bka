@@ -1,6 +1,6 @@
 {
   "name": "ris-bka",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Javascript lib for request to ris.bka.gv.at",
   "main": "index.js",
   "keywords": [
@@ -31,5 +31,9 @@
     "url": "https://github.com/ximex/ris-bka.git"
   },
   "bugs": "https://github.com/ximex/ris-bka/issues",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "jsonix": "^2.1.3",
+    "request": "^2.53.0"
+  }
 }
