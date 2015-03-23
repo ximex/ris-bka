@@ -9,7 +9,8 @@ describe('RisBka', function () {
 
     let docId = 'NOR40091435';
 
-    it('should return soapBody with keys: aenderungsdatum, results', function (done) {
+    it('should return soapBody with many keys', function (done) {
+      this.timeout(5000);
       RisBka.getDocument(docId, function (soapBody, raw) {
         soapBody.should.have.keys([
           'aenderungsdatum', 'applikation', 'dokumentnummer', 'kurztitel', 'kundmachungsorgan', 'typ',
@@ -21,6 +22,7 @@ describe('RisBka', function () {
     });
 
     it('should return raw with keys: error, response, body', function (done) {
+      this.timeout(5000);
       RisBka.getDocument(docId, function (soapBody, raw) {
         raw.should.have.keys(['error', 'response', 'body']);
         done();

@@ -10,6 +10,7 @@ describe('RisBka', function () {
     let query = {};
 
     it('should return soapBody with keys: paging, results', function (done) {
+      this.timeout(5000);
       RisBka.searchDocuments(query, function (soapBody, raw) {
         soapBody.should.have.keys(['paging', 'results']);
         done();
@@ -17,6 +18,7 @@ describe('RisBka', function () {
     });
 
     it('should return raw with keys: error, response, body', function (done) {
+      this.timeout(5000);
       RisBka.searchDocuments(query, function (soapBody, raw) {
         raw.should.have.keys(['error', 'response', 'body']);
         done();
