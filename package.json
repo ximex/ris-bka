@@ -2,7 +2,7 @@
   "name": "ris-bka",
   "version": "0.1.0",
   "description": "Javascript lib for request to ris.bka.gv.at",
-  "main": "index.js",
+  "main": "./lib/index.js",
   "keywords": [
     "RIS",
     "BKA",
