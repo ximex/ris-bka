@@ -18,13 +18,13 @@ var RisBka = require('ris-bka');
 ```
 
 ### Methods
-- RisBka.getVersion(cbOk, [cbFail])
-- RisBka.searchDocuments(query, cbOk, [cbFail])
-- RisBka.getDocument(docId, cbOk, [cbFail])
+- **getVersion:** `RisBka.getVersion(cbOk, [cbFail])`
+- **searchDocuments:** `RisBka.searchDocuments(query, cbOk, [cbFail])`
+- **getDocument:** `RisBka.getDocument(docId, cbOk, [cbFail])`
 
 ### Callbacks
-- **cbOk:** function (soapBody, raw) { ... } - Executed if all works fine
-- **cbFail:** function (err, soapBody, raw) { ... } - Executed if any error appears
+- **cbOk:** `function (soapBody, raw) { ... }` - Executed if all works fine
+- **cbFail:** `function (err, soapBody, raw) { ... }` - Executed if any error appears
 
 ### Parameter
 - **query:**
