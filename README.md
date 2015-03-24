@@ -29,16 +29,16 @@ var RisBka = require('ris-bka');
 ### Parameter
 - **query:**
   - Type: `Object`
-  - More: Look Query-Structure
+  - More: Look *Query-Structure*
 - **docId:**
   - Type: `String`
-  - Example: 'NOR40091435'
+  - Example: `'NOR40091435'`
 - **err:**
   - Type: `Object`
   - Structure: `{ errorType: 'String', error: { ... } }`
 - **soapBody:**
   - Type: `Object`
-  - More: Look soapBody-Structure
+  - More: Look *soapBody-Structure*
 - **raw:**
   - Type: `Object`
   - Structure: `{ error: { ... }, response: { ... }, body: { ... } }`
@@ -48,12 +48,48 @@ var RisBka = require('ris-bka');
 
 #### Query
 ```javascript
-// TODO
+{
+  searchTerms: '', // PhraseSearchExpression
+  title: '', // PhraseSearchExpression
+  index: '', // PhraseSearchExpression
+  section: {
+    number: [
+      1,
+      2
+    ],
+    character: [
+      'a',
+      'z'
+    ],
+    typ: '' // "Alle", "Artikel", "Paragraph", "Anlage"
+  },
+  verionDate: '', // Date
+  announcementInstitution: '', // PhraseSearchExpression
+  announcementInstitutionNumber: '', // PhraseSearchExpression
+  includedDate: '', // "Undefined", "EinerWoche", "ZweiWochen", "EinemMonat", "DreiMonaten", "SechsMonaten", "EinemJahr"
+  paging: {
+    docsPerPage: '', // "Ten", "Twenty", "Fifty", "OneHundred"
+    page: 1 // Integer
+  },
+  sort: {
+    direction: '', // "Ascending", "Descending"
+    column: '' // "ArtikelParagraphAnlage", "Kurzinformation"
+  }
+}
+```
+
+##### PhraseSearchExpression
+```javascript
+{
+  // TODO
+}
 ```
 
 #### soapBody
 ```javascript
-// TODO
+{
+  // TODO
+}
 ```
 
 
