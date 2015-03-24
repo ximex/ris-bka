@@ -13,10 +13,16 @@ describe('RisBka', function () {
       this.timeout(5000);
       RisBka.getDocument(docId, function (soapBody, raw) {
         soapBody.should.have.keys([
-          'aenderungsdatum', 'applikation', 'dokumentnummer', 'kurztitel', 'kundmachungsorgan', 'typ',
-          'artikelParagraphAnlage', 'inkrafttretedatum', 'ausserkrafttretedatum', 'unterzeichnungsdatum',
-          'indizes', 'schlagworte', 'veroeffentlichungsdatum', 'gesetzesnummer', 'dokumentinhalt'
+          'applikation', 'dokumentnummer', 'kurztitel', 'kundmachungsorgan', 'typ', 'artikelParagraphAnlage',
+          'inkrafttretedatum', 'ausserkrafttretedatum', 'abkuerzung', 'unterzeichnungsdatum', 'indizes',
+          'uebergangsrecht', 'beachteZurGanzenRechtsvorschrift', 'beachte', 'aenderung', 'langtitel', 'sprachen',
+          'staaten', 'anmerkungZurGanzenRechtsvorschrift', 'anmerkung', 'schlagworte', 'veroeffentlichungsdatum',
+          'aenderungsdatum', 'gesetzesnummer', 'alteDokumentnummer', 'dokumentinhalt'
         ]);
+        soapBody.dokumentinhalt.forEach(function (contentReference) {
+          contentReference.should.have.keys(['contentType', 'name', 'dataType', 'risdok']);
+          contentReference.risdok.should.have.keys(['metadaten', 'nutzdaten', 'layoutdaten']);
+        });
         done();
       });
     });
