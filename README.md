@@ -47,25 +47,26 @@ var RisBka = require('ris-bka');
 ### Object-Structure
 
 #### Query
+**NOT IMPLEMENTED YET**
 ```javascript
 {
-  searchTerms: '', // PhraseSearchExpression
-  title: '', // PhraseSearchExpression
-  index: '', // PhraseSearchExpression
+  searchTerms: {}, // PhraseSearchExpression
+  title: {}, // PhraseSearchExpression
+  index: {}, // PhraseSearchExpression
   section: {
     number: [
-      1,
-      2
+      0, // Start-Number (Integer)
+      9 // End-Number (Integer)
     ],
     character: [
-      'a',
-      'z'
+      'a', // Start-Character
+      'z' // End-Character
     ],
     typ: '' // "Alle", "Artikel", "Paragraph", "Anlage"
   },
   verionDate: '', // Date
-  announcementInstitution: '', // PhraseSearchExpression
-  announcementInstitutionNumber: '', // PhraseSearchExpression
+  announcementInstitution: {}, // PhraseSearchExpression
+  announcementInstitutionNumber: {}, // PhraseSearchExpression
   includedDate: '', // "Undefined", "EinerWoche", "ZweiWochen", "EinemMonat", "DreiMonaten", "SechsMonaten", "EinemJahr"
   paging: {
     docsPerPage: '', // "Ten", "Twenty", "Fifty", "OneHundred"
@@ -79,9 +80,28 @@ var RisBka = require('ris-bka');
 ```
 
 ##### PhraseSearchExpression
+**NOT IMPLEMENTED YET**
+`{}` represents a search expression
 ```javascript
+// AND
 {
-  // TODO
+  and: [{}, {}]
+}
+// OR
+{
+  or: [{}, {}]
+}
+// NOT
+{
+  not: {}
+}
+// MASK
+{
+  mask: {}
+}
+// VALUE
+{
+  value: 'SearchString'
 }
 ```
 
