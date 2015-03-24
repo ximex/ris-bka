@@ -64,7 +64,7 @@ var RisBka = require('ris-bka');
     ],
     typ: '' // "Alle", "Artikel", "Paragraph", "Anlage"
   },
-  verionDate: '', // Date
+  versionDate: '', // Date
   announcementInstitution: {}, // PhraseSearchExpression
   announcementInstitutionNumber: {}, // PhraseSearchExpression
   includedDate: '', // "Undefined", "EinerWoche", "ZweiWochen", "EinemMonat", "DreiMonaten", "SechsMonaten", "EinemJahr"
@@ -81,15 +81,16 @@ var RisBka = require('ris-bka');
 
 ##### PhraseSearchExpression
 **NOT IMPLEMENTED YET**
+
 `{}` represents a search expression
 ```javascript
 // AND
 {
-  and: [{}, {}]
+  and: [{}, ...]
 }
 // OR
 {
-  or: [{}, {}]
+  or: [{}, ...]
 }
 // NOT
 {
@@ -115,7 +116,21 @@ var RisBka = require('ris-bka');
 ##### searchDocuments
 ```javascript
 {
-  // TODO
+  paging: {
+    page: 'Integer',
+    size: 'Integer',
+    count: 'Integer'
+  },
+  results: [
+    {
+      applikation: 'String',
+      dokumentnummer: 'String',
+      artikelParagraphAnlage: 'String',
+      kurzinformation: 'String',
+      dokumentUrl: 'String'
+    },
+    { ... }
+  ]
 }
 ```
 
