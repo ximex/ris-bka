@@ -90,53 +90,53 @@ Es stehen folgende Suchkriterien zur Verfügung:
 Als **Suchoperatoren** stehen folgende Möglichkeiten zur Verfügung:
 - **UND**
   Um eine UND-Verknüpfung zu erzielen, muss die entsprechende „SearchExpression“ vom Typ „AndSearchExpression“ verwendet werden.
-  ```xml
-  <SearchExpression xsi:type="AndSearchExpression">
-    <Expressions xsi:type="ArrayOfSearchExpression">
-      <SearchExpression xsi:type="PhraseSearchExpression">
-        <Value>Kind</Value>
-      </SearchExpression>
-      <SearchExpression xsi:type="PhraseSearchExpression">
-        <Value>Ehe</Value>
-      </SearchExpression>
-    </Expressions>
-  </SearchExpression>
-  ```
+```xml
+<SearchExpression xsi:type="AndSearchExpression">
+  <Expressions xsi:type="ArrayOfSearchExpression">
+    <SearchExpression xsi:type="PhraseSearchExpression">
+      <Value>Kind</Value>
+    </SearchExpression>
+    <SearchExpression xsi:type="PhraseSearchExpression">
+      <Value>Ehe</Value>
+    </SearchExpression>
+  </Expressions>
+</SearchExpression>
+```
 - **ODER**
   Um eine ODER-Verknüpfung zu erzielen, muss die entsprechende „SearchExpression“ vom Typ „OrSearchExpression“ verwendet werden.
-  ```xml
-  <SearchExpression xsi:type="OrSearchExpression">
-    <Expressions xsi:type="ArrayOfSearchExpression">
-      <SearchExpression xsi:type="PhraseSearchExpression">
-        <Value>Scheidung</Value>
-      </SearchExpression>
-        <SearchExpression xsi:type="PhraseSearchExpression">
-      <Value>Ehe</Value>
-      </SearchExpression>
-    </Expressions>
-  </SearchExpression>
-  ```
-- **NICHT**
-  Um eine Suche abzusetzen, in deren Ergebnis ein Begriff nicht enthalten sein soll, muss die entsprechende „SearchExpression“ vom Typ „NotSearchExpression“ verwendet werden.
-  ```xml
+```xml
+<SearchExpression xsi:type="OrSearchExpression">
   <Expressions xsi:type="ArrayOfSearchExpression">
     <SearchExpression xsi:type="PhraseSearchExpression">
       <Value>Scheidung</Value>
     </SearchExpression>
-    <SearchExpression xsi:type="NotSearchExpression">
-      <Expression xsi:type="PhraseSearchExpression">
-        <Value>Ehe</Value>
-      </Expression>
+    <SearchExpression xsi:type="PhraseSearchExpression">
+      <Value>Ehe</Value>
     </SearchExpression>
   </Expressions>
-  ```
+</SearchExpression>
+```
+- **NICHT**
+  Um eine Suche abzusetzen, in deren Ergebnis ein Begriff nicht enthalten sein soll, muss die entsprechende „SearchExpression“ vom Typ „NotSearchExpression“ verwendet werden.
+```xml
+<Expressions xsi:type="ArrayOfSearchExpression">
+  <SearchExpression xsi:type="PhraseSearchExpression">
+    <Value>Scheidung</Value>
+  </SearchExpression>
+  <SearchExpression xsi:type="NotSearchExpression">
+    <Expression xsi:type="PhraseSearchExpression">
+      <Value>Ehe</Value>
+    </Expression>
+  </SearchExpression>
+</Expressions>
+```
 - **Maskierung** mit Stern
   Es werden Begriffe gefunden, die statt „*“ ein oder mehrere Zeichen enthalten. Die Maskierung ist nur am Ende eines Suchbegriffes zulässig.
-  ```xml
-  <SearchExpression xsi:type="PhraseSearchExpression">
-    <Value>Kind*</Value>
-  </SearchExpression>
-  ```
+```xml
+<SearchExpression xsi:type="PhraseSearchExpression">
+  <Value>Kind*</Value>
+</SearchExpression>
+```
 
 #### Seiteninformationen:
 Das Ergebnis der Abfrage wird in Seiten aufgeteilt zurückgegeben. Mittels des Elements „DokumenteProSeite“ können Sie die Anzahl der gefundenen Dokumente pro Seite festlegen. Im Element „Seitennummer“ geben Sie an, welche Seite retourniert werden soll.
