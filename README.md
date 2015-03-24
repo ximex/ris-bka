@@ -23,8 +23,8 @@ var RisBka = require('ris-bka');
 - **getDocument:** `RisBka.getDocument(docId, cbOk, [cbFail])`
 
 ### Callbacks
-- **cbOk:** `function (soapBody, raw) { ... }` - Executed if all works fine
-- **cbFail:** `function (err, soapBody, raw) { ... }` - Executed if any error appears
+- **cbOk:** `function (soapBody, [raw]) { ... }` - Executed if all works fine
+- **cbFail:** `function (err, soapBody, [raw]) { ... }` - Executed if any error appears
 
 ### Parameter
 - **query:**
@@ -106,9 +106,60 @@ var RisBka = require('ris-bka');
 ```
 
 #### soapBody
+
+##### getVersion
+```javascript
+'OGD_1.3.0'
+```
+
+##### searchDocuments
 ```javascript
 {
   // TODO
+}
+```
+
+##### getDocuments
+```javascript
+{
+  applikation: 'String',
+  dokumentnummer: 'String',
+  kurztitel: 'String',
+  kundmachungsorgan: 'String',
+  typ: 'String',
+  artikelParagraphAnlage: 'String',
+  inkrafttretedatum: 'Date',
+  ausserkrafttretedatum: 'Date',
+  abkuerzung: 'String',
+  unterzeichnungsdatum: 'Date',
+  indizes: ['String', 'String'],
+  uebergangsrecht: 'String',
+  beachteZurGanzenRechtsvorschrift: 'String',
+  beachte: 'String',
+  aenderung: 'String',
+  langtitel: 'String',
+  sprachen: 'String',
+  staaten: 'String',
+  anmerkungZurGanzenRechtsvorschrift: 'String',
+  anmerkung: 'String',
+  schlagworte: 'String',
+  veroeffentlichungsdatum: 'Date',
+  aenderungsdatum: 'Date',
+  gesetzesnummer: 'String',
+  alteDokumentnummer: 'String',
+  dokumentinhalt: [
+    {
+      contentType: 'String',
+      name: 'String',
+      dataType: 'String',
+      risdok: {
+        metadaten: { ... },
+        nutzdaten: { ... },
+        layoutdaten: { ... }
+      }
+    },
+    { ... }
+  ]
 }
 ```
 
