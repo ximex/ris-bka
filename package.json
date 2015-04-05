@@ -41,5 +41,11 @@
   },
   "scripts": {
     "test": "mocha --harmony test/"
-  }
+  },
+  "files": [
+    "lib/",
+    "mappings/",
+    "LICENSE",
+    "package.json"
+  ]
 }
