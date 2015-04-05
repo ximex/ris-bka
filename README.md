@@ -50,9 +50,9 @@ var RisBka = require('ris-bka');
 **NOT IMPLEMENTED YET**
 ```javascript
 {
-  searchTerms: {}, // PhraseSearchExpression
-  title: {}, // PhraseSearchExpression
-  index: {}, // PhraseSearchExpression
+  searchTerms: '', // PhraseSearchExpression
+  title: '', // PhraseSearchExpression
+  index: '', // PhraseSearchExpression
   section: {
     number: [
       0, // Start-Number (Integer)
@@ -65,21 +65,21 @@ var RisBka = require('ris-bka');
     typ: '' // "Alle", "Artikel", "Paragraph", "Anlage"
   },
   versionDate: '', // Date
-  announcementInstitution: {}, // PhraseSearchExpression
-  announcementInstitutionNumber: {}, // PhraseSearchExpression
+  announcementInstitution: '', // PhraseSearchExpression
+  announcementInstitutionNumber: '', // PhraseSearchExpression
   includedDate: '', // "Undefined", "EinerWoche", "ZweiWochen", "EinemMonat", "DreiMonaten", "SechsMonaten", "EinemJahr"
   paging: {
     docsPerPage: '', // "Ten", "Twenty", "Fifty", "OneHundred"
-    page: 1 // Integer
+    page: 1 // Integer [required]
   },
   sort: {
-    direction: '', // "Ascending", "Descending"
-    column: '' // "ArtikelParagraphAnlage", "Kurzinformation"
+    direction: '', // "Ascending", "Descending" [required]
+    column: '' // "ArtikelParagraphAnlage", "Kurzinformation" [required]
   }
 }
 ```
 
-##### PhraseSearchExpression
+##### SearchExpression
 **NOT IMPLEMENTED YET**
 
 `{}` represents a search expression
@@ -147,7 +147,7 @@ var RisBka = require('ris-bka');
   ausserkrafttretedatum: 'Date',
   abkuerzung: 'String',
   unterzeichnungsdatum: 'Date',
-  indizes: ['String', 'String'],
+  indizes: ['String', ... ],
   uebergangsrecht: 'String',
   beachteZurGanzenRechtsvorschrift: 'String',
   beachte: 'String',

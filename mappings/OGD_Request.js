@@ -75,15 +75,15 @@ var OGD_Request_Module_Factory = function () {
         propertyInfos: [{
             name: 'suchworte',
             elementName: 'Suchworte',
-            typeInfo: '.SearchExpression'
+            typeInfo: '.PhraseSearchExpression' // SearchExpression
           }, {
             name: 'titel',
             elementName: 'Titel',
-            typeInfo: '.SearchExpression'
+            typeInfo: '.PhraseSearchExpression' // SearchExpression
           }, {
             name: 'index',
             elementName: 'Index',
-            typeInfo: '.SearchExpression'
+            typeInfo: '.PhraseSearchExpression' // SearchExpression
           }, {
             name: 'abschnitt',
             elementName: 'Abschnitt',
