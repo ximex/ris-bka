@@ -379,7 +379,7 @@ Das Element „Dokumentinhalt“ enthält die formatierten Nutzdaten. In den mei
 - **DataType**
   Im Element „DataType“ befindet sich die Angabe zum Dateiformat, wobei das Hauptdokument immer den Wert „Xml“ aufweist. Bei Anlagen sind folgende Werte möglich (Xml, Pdf, Gif, Jpg, Tiff, Png).
 
-#### Beschreibung derNutzdaten:
+#### Beschreibung der Nutzdaten:
 Die formatierten Nutzdaten sind im Element „nutzdaten“ zu finden und entsprechen dem Schema „RISJudikaturNutzdaten.xsd“.
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
