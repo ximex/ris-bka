@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased][unreleased]
 ### Changed
 - translate searchDocuments properties into english
+- Update searchDocuments properties in Readme
 
 ### Fixed
 - typo in Readme (getDocuments -> getDocument)

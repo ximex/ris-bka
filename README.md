@@ -122,11 +122,11 @@ var RisBka = require('ris-bka');
   },
   results: [
     {
-      applikation: 'String',
-      dokumentnummer: 'String',
-      artikelParagraphAnlage: 'String',
-      kurzinformation: 'String',
-      dokumentUrl: 'String'
+      application: 'String',
+      documentNumber: 'String',
+      articelParagraphAttachment: 'String',
+      shortInformation: 'String',
+      documentUrl: 'String'
     },
     { ... }
   ]
