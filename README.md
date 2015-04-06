@@ -133,7 +133,7 @@ var RisBka = require('ris-bka');
 }
 ```
 
-##### getDocuments
+##### getDocument
 ```javascript
 {
   applikation: 'String',
