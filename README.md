@@ -47,21 +47,20 @@ var RisBka = require('ris-bka');
 ### Object-Structure
 
 #### Query
-**NOT IMPLEMENTED YET**
 ```javascript
 {
   searchTerms: '', // PhraseSearchExpression
   title: '', // PhraseSearchExpression
   index: '', // PhraseSearchExpression
   section: {
-    number: [
-      0, // Start-Number (Integer)
-      9 // End-Number (Integer)
-    ],
-    character: [
-      'a', // Start-Character
-      'z' // End-Character
-    ],
+    number: {
+      start: 1, // Start-Number (Integer)
+      end: 2 // End-Number (Integer)
+    },
+    character: {
+      start: 'a', // Start-Character
+      end: 'z' // End-Character
+    },
     typ: '' // "Alle", "Artikel", "Paragraph", "Anlage"
   },
   versionDate: '', // Date
