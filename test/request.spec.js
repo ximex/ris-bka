@@ -41,7 +41,7 @@ describe('RisBka', function () {
       RisBka.searchDocuments(query, function (soapBody, raw) {
         soapBody.should.have.keys(['paging', 'results']);
         soapBody.results.forEach(function (result) {
-          result.should.have.keys(['applikation', 'dokumentnummer', 'artikelParagraphAnlage', 'kurzinformation', 'dokumentUrl']);
+          result.should.have.keys(['application', 'documentNumber', 'articelParagraphAttachment', 'shortInformation', 'documentUrl']);
         });
         done();
       });
