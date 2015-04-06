@@ -8,17 +8,17 @@ var query = {
   title: '', // PhraseSearchExpression
   index: '', // PhraseSearchExpression
   section: {
-    number: [
-      1,
-      2
-    ],
-    character: [
-      'a',
-      'z'
-    ],
+    number: {
+      start: 1,
+      end: 2
+    },
+    character: {
+      start: 'a',
+      end: 'z'
+    },
     typ: '' // "Alle", "Artikel", "Paragraph", "Anlage"
   },
-  verionDate: '', // Date
+  versionDate: undefined, // Date
   announcementInstitution: '', // PhraseSearchExpression
   announcementInstitutionNumber: '', // PhraseSearchExpression
   includedDate: '', // "Undefined", "EinerWoche", "ZweiWochen", "EinemMonat", "DreiMonaten", "SechsMonaten", "EinemJahr"
