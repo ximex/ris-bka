@@ -5,7 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased][unreleased]
 ### Changed
 - translate searchDocuments properties into english
-- Update searchDocuments properties in Readme
+- translate getDocument properties into english
 - update mocha
 
 ### Fixed

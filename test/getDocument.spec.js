@@ -13,15 +13,15 @@ describe('RisBka', function () {
       this.timeout(5000);
       RisBka.getDocument(docId, function (soapBody, raw) {
         soapBody.should.have.keys([
-          'applikation', 'dokumentnummer', 'kurztitel', 'kundmachungsorgan', 'typ', 'artikelParagraphAnlage',
-          'inkrafttretedatum', 'ausserkrafttretedatum', 'abkuerzung', 'unterzeichnungsdatum', 'indizes',
-          'uebergangsrecht', 'beachteZurGanzenRechtsvorschrift', 'beachte', 'aenderung', 'langtitel', 'sprachen',
-          'staaten', 'anmerkungZurGanzenRechtsvorschrift', 'anmerkung', 'schlagworte', 'veroeffentlichungsdatum',
-          'aenderungsdatum', 'gesetzesnummer', 'alteDokumentnummer', 'dokumentinhalt'
+          'application', 'documentNumber', 'shortTitle', 'announcementInstitution', 'typ',
+          'articleParagraphAttachment', 'comeIntoForceDate', 'exceptIntoForceDate', 'abbreviation',
+          'signingDate', 'indices', 'transitionLaw', 'considerForWholeLaw', 'consider', 'change',
+          'longTitle', 'languages', 'states', 'noteForWholeLaw', 'note', 'keywords', 'releaseDate',
+          'changeDate', 'lawNumber', 'oldDocumentNumber', 'documentContent'
         ]);
-        soapBody.dokumentinhalt.forEach(function (contentReference) {
-          contentReference.should.have.keys(['contentType', 'name', 'dataType', 'risdok']);
-          contentReference.risdok.should.have.keys(['metadaten', 'nutzdaten', 'layoutdaten']);
+        soapBody.documentContent.forEach(function (contentReference) {
+          contentReference.should.have.keys(['contentType', 'name', 'dataType', 'risDoc']);
+          contentReference.risDoc.should.have.keys(['metaData', 'userData', 'layoutData']);
         });
         done();
       });
