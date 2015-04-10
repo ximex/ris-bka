@@ -124,7 +124,7 @@ var RisBka = require('ris-bka');
     {
       application: 'String',
       documentNumber: 'String',
-      articelParagraphAttachment: 'String',
+      articleParagraphAttachment: 'String',
       shortInformation: 'String',
       documentUrl: 'String'
     },
