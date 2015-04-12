@@ -3,7 +3,29 @@ var OGD_ResponseList_Module_Factory = function () {
     name: 'OGD_ResponseList',
     defaultElementNamespaceURI: 'http:\/\/ris.bka.gv.at\/Search\/1.3\/OGD',
     typeInfos: [{
+        localName: 'TError',
+        typeName: 'T_Error',
+        propertyInfos: [{
+            name: 'applikation',
+            elementName: {
+              localPart: 'Applikation'
+            }
+          }, {
+            name: 'message',
+            elementName: {
+              localPart: 'Message'
+            }
+          }, {
+            name: 'errorType',
+            typeInfo: 'Int',
+            attributeName: {
+              localPart: 'errorType'
+            },
+            type: 'attribute'
+          }]
+      }, {
         localName: 'Hits',
+        typeName: null,
         propertyInfos: [{
             name: 'value',
             typeInfo: 'Integer',
@@ -24,7 +46,51 @@ var OGD_ResponseList_Module_Factory = function () {
             type: 'attribute'
           }]
       }, {
+        localName: 'TDocumentReferences',
+        typeName: 'T_DocumentReferences',
+        propertyInfos: [{
+            name: 'ogdDocumentReference',
+            collection: true,
+            elementName: 'OGDDocumentReference',
+            typeInfo: '.TOGDDocumentReference'
+          }]
+      }, {
+        localName: 'TOGDSearchResult.SearchDocumentsResult',
+        typeName: null,
+        propertyInfos: [{
+            name: 'hits',
+            elementName: 'Hits',
+            typeInfo: '.Hits'
+          }, {
+            name: 'documentReferences',
+            elementName: 'DocumentReferences',
+            typeInfo: '.TDocumentReferences'
+          }]
+      }, {
+        localName: 'TOGDDocumentReference',
+        typeName: 'T_OGDDocumentReference',
+        propertyInfos: [{
+            name: 'applikation',
+            elementName: 'Applikation'
+          }, {
+            name: 'dokumentnummer',
+            elementName: 'Dokumentnummer'
+          }, {
+            name: 'artikelParagraphAnlage',
+            elementName: 'ArtikelParagraphAnlage'
+          }, {
+            name: 'kurzinformation',
+            elementName: 'Kurzinformation'
+          }, {
+            name: 'dokumentUrl',
+            elementName: 'DokumentUrl'
+          }]
+      }, {
         localName: 'TOGDSearchResult',
+        typeName: {
+          namespaceURI: '',
+          localPart: 'T_OGDSearchResult'
+        },
         propertyInfos: [{
             name: 'error',
             elementName: {
@@ -45,91 +111,34 @@ var OGD_ResponseList_Module_Factory = function () {
             type: 'attribute'
           }]
       }, {
-        localName: 'TOGDDocumentReference',
-        propertyInfos: [{
-            name: 'applikation',
-            elementName: 'Applikation'
-          }, {
-            name: 'dokumentnummer',
-            elementName: 'Dokumentnummer'
-          }, {
-            name: 'artikelParagraphAnlage',
-            elementName: 'ArtikelParagraphAnlage'
-          }, {
-            name: 'kurzinformation',
-            elementName: 'Kurzinformation'
-          }, {
-            name: 'dokumentUrl',
-            elementName: 'DokumentUrl'
-          }]
-      }, {
-        localName: 'TError',
-        propertyInfos: [{
-            name: 'applikation',
-            elementName: {
-              localPart: 'Applikation'
-            }
-          }, {
-            name: 'message',
-            elementName: {
-              localPart: 'Message'
-            }
-          }, {
-            name: 'errorType',
-            typeInfo: 'Int',
-            attributeName: {
-              localPart: 'errorType'
-            },
-            type: 'attribute'
-          }]
-      }, {
-        localName: 'TDocumentReferences',
-        propertyInfos: [{
-            name: 'ogdDocumentReference',
-            collection: true,
-            elementName: 'OGDDocumentReference',
-            typeInfo: '.TOGDDocumentReference'
-          }]
-      }, {
-        localName: 'TOGDSearchResult.SearchDocumentsResult',
-        propertyInfos: [{
-            name: 'hits',
-            elementName: 'Hits',
-            typeInfo: '.Hits'
-          }, {
-            name: 'documentReferences',
-            elementName: 'DocumentReferences',
-            typeInfo: '.TDocumentReferences'
-          }]
-      }, {
         type: 'enumInfo',
         localName: 'TApplikation',
         values: ['Bundesrecht']
       }],
     elementInfos: [{
-        elementName: 'OGDDocumentReference',
-        typeInfo: '.TOGDDocumentReference'
-      }, {
         elementName: 'Kurzinformation'
+      }, {
+        elementName: 'DokumentUrl'
+      }, {
+        elementName: 'ArtikelParagraphAnlage'
+      }, {
+        elementName: 'Dokumentnummer'
+      }, {
+        elementName: 'DocumentReferences',
+        typeInfo: '.TDocumentReferences'
+      }, {
+        elementName: 'Applikation'
       }, {
         elementName: 'Hits',
         typeInfo: '.Hits'
       }, {
-        elementName: 'Dokumentnummer'
-      }, {
-        elementName: 'Applikation'
-      }, {
-        elementName: 'DokumentUrl'
+        elementName: 'OGDDocumentReference',
+        typeInfo: '.TOGDDocumentReference'
       }, {
         elementName: {
           localPart: 'OGDSearchResult'
         },
         typeInfo: '.TOGDSearchResult'
-      }, {
-        elementName: 'DocumentReferences',
-        typeInfo: '.TDocumentReferences'
-      }, {
-        elementName: 'ArtikelParagraphAnlage'
       }]
   };
   return {

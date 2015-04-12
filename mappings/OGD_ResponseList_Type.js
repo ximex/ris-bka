@@ -3,15 +3,8 @@ var OGD_ResponseList_Type_Module_Factory = function () {
     name: 'OGD_ResponseList_Type',
     defaultElementNamespaceURI: 'http:\/\/ris.bka.gv.at\/Search\/1.3\/OGD',
     typeInfos: [{
-        localName: 'TDocumentReferences',
-        propertyInfos: [{
-            name: 'ogdDocumentReference',
-            collection: true,
-            elementName: 'OGDDocumentReference',
-            typeInfo: '.TOGDDocumentReference'
-          }]
-      }, {
         localName: 'Hits',
+        typeName: null,
         propertyInfos: [{
             name: 'value',
             typeInfo: 'Integer',
@@ -32,25 +25,8 @@ var OGD_ResponseList_Type_Module_Factory = function () {
             type: 'attribute'
           }]
       }, {
-        localName: 'TOGDDocumentReference',
-        propertyInfos: [{
-            name: 'applikation',
-            elementName: 'Applikation'
-          }, {
-            name: 'dokumentnummer',
-            elementName: 'Dokumentnummer'
-          }, {
-            name: 'artikelParagraphAnlage',
-            elementName: 'ArtikelParagraphAnlage'
-          }, {
-            name: 'kurzinformation',
-            elementName: 'Kurzinformation'
-          }, {
-            name: 'dokumentUrl',
-            elementName: 'DokumentUrl'
-          }]
-      }, {
         localName: 'TError',
+        typeName: 'T_Error',
         propertyInfos: [{
             name: 'applikation',
             elementName: {
@@ -70,29 +46,57 @@ var OGD_ResponseList_Type_Module_Factory = function () {
             type: 'attribute'
           }]
       }, {
+        localName: 'TDocumentReferences',
+        typeName: 'T_DocumentReferences',
+        propertyInfos: [{
+            name: 'ogdDocumentReference',
+            collection: true,
+            elementName: 'OGDDocumentReference',
+            typeInfo: '.TOGDDocumentReference'
+          }]
+      }, {
+        localName: 'TOGDDocumentReference',
+        typeName: 'T_OGDDocumentReference',
+        propertyInfos: [{
+            name: 'applikation',
+            elementName: 'Applikation'
+          }, {
+            name: 'dokumentnummer',
+            elementName: 'Dokumentnummer'
+          }, {
+            name: 'artikelParagraphAnlage',
+            elementName: 'ArtikelParagraphAnlage'
+          }, {
+            name: 'kurzinformation',
+            elementName: 'Kurzinformation'
+          }, {
+            name: 'dokumentUrl',
+            elementName: 'DokumentUrl'
+          }]
+      }, {
         type: 'enumInfo',
         localName: 'TApplikation',
         values: ['Bundesrecht']
       }],
     elementInfos: [{
-        elementName: 'Hits',
-        typeInfo: '.Hits'
-      }, {
         elementName: 'Applikation'
-      }, {
-        elementName: 'Kurzinformation'
-      }, {
-        elementName: 'OGDDocumentReference',
-        typeInfo: '.TOGDDocumentReference'
-      }, {
-        elementName: 'ArtikelParagraphAnlage'
       }, {
         elementName: 'DokumentUrl'
       }, {
-        elementName: 'Dokumentnummer'
-      }, {
         elementName: 'DocumentReferences',
         typeInfo: '.TDocumentReferences'
+      }, {
+        elementName: 'Dokumentnummer'
+      }, {
+        elementName: 'ArtikelParagraphAnlage'
+      }, {
+        elementName: 'Kurzinformation'
+      }, {
+        elementName: 'Hits',
+        typeInfo: '.Hits'
+      }, {
+        elementName: 'OGDDocumentReference',
+        typeInfo: '.TOGDDocumentReference'
       }]
   };
   return {

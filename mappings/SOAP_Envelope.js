@@ -3,7 +3,41 @@ var SOAP_Envelope_Module_Factory = function () {
     name: 'SOAP_Envelope',
     defaultElementNamespaceURI: 'http:\/\/www.w3.org\/2003\/05\/soap-envelope',
     typeInfos: [{
+        localName: 'Subcode',
+        typeName: 'subcode',
+        propertyInfos: [{
+            name: 'value',
+            elementName: 'Value',
+            typeInfo: 'QName'
+          }, {
+            name: 'subcode',
+            elementName: 'Subcode',
+            typeInfo: '.Subcode'
+          }]
+      }, {
+        localName: 'Faultreason',
+        typeName: 'faultreason',
+        propertyInfos: [{
+            name: 'text',
+            collection: true,
+            elementName: 'Text',
+            typeInfo: '.Reasontext'
+          }]
+      }, {
+        localName: 'Detail',
+        typeName: 'detail',
+        propertyInfos: [{
+            name: 'otherAttributes',
+            type: 'anyAttribute'
+          }, {
+            name: 'any',
+            collection: true,
+            mixed: false,
+            type: 'anyElement'
+          }]
+      }, {
         localName: 'Reasontext',
+        typeName: 'reasontext',
         propertyInfos: [{
             name: 'value',
             type: 'value'
@@ -16,25 +50,12 @@ var SOAP_Envelope_Module_Factory = function () {
             type: 'attribute'
           }]
       }, {
-        localName: 'Body',
+        localName: 'UpgradeType',
         propertyInfos: [{
-            name: 'otherAttributes',
-            type: 'anyAttribute'
-          }, {
-            name: 'any',
+            name: 'supportedEnvelope',
             collection: true,
-            mixed: false,
-            type: 'anyElement'
-          }]
-      }, {
-        localName: 'NotUnderstoodType',
-        propertyInfos: [{
-            name: 'qname',
-            typeInfo: 'QName',
-            attributeName: {
-              localPart: 'qname'
-            },
-            type: 'attribute'
+            elementName: 'SupportedEnvelope',
+            typeInfo: '.SupportedEnvType'
           }]
       }, {
         localName: 'Fault',
@@ -58,6 +79,17 @@ var SOAP_Envelope_Module_Factory = function () {
             typeInfo: '.Detail'
           }]
       }, {
+        localName: 'Body',
+        propertyInfos: [{
+            name: 'otherAttributes',
+            type: 'anyAttribute'
+          }, {
+            name: 'any',
+            collection: true,
+            mixed: false,
+            type: 'anyElement'
+          }]
+      }, {
         localName: 'SupportedEnvType',
         propertyInfos: [{
             name: 'qname',
@@ -68,23 +100,8 @@ var SOAP_Envelope_Module_Factory = function () {
             type: 'attribute'
           }]
       }, {
-        localName: 'Faultreason',
-        propertyInfos: [{
-            name: 'text',
-            collection: true,
-            elementName: 'Text',
-            typeInfo: '.Reasontext'
-          }]
-      }, {
-        localName: 'UpgradeType',
-        propertyInfos: [{
-            name: 'supportedEnvelope',
-            collection: true,
-            elementName: 'SupportedEnvelope',
-            typeInfo: '.SupportedEnvType'
-          }]
-      }, {
-        localName: 'Subcode',
+        localName: 'Faultcode',
+        typeName: 'faultcode',
         propertyInfos: [{
             name: 'value',
             elementName: 'Value',
@@ -106,26 +123,14 @@ var SOAP_Envelope_Module_Factory = function () {
             type: 'anyElement'
           }]
       }, {
-        localName: 'Detail',
+        localName: 'NotUnderstoodType',
         propertyInfos: [{
-            name: 'otherAttributes',
-            type: 'anyAttribute'
-          }, {
-            name: 'any',
-            collection: true,
-            mixed: false,
-            type: 'anyElement'
-          }]
-      }, {
-        localName: 'Faultcode',
-        propertyInfos: [{
-            name: 'value',
-            elementName: 'Value',
-            typeInfo: 'QName'
-          }, {
-            name: 'subcode',
-            elementName: 'Subcode',
-            typeInfo: '.Subcode'
+            name: 'qname',
+            typeInfo: 'QName',
+            attributeName: {
+              localPart: 'qname'
+            },
+            type: 'attribute'
           }]
       }, {
         localName: 'Envelope',
@@ -143,23 +148,23 @@ var SOAP_Envelope_Module_Factory = function () {
           }]
       }],
     elementInfos: [{
-        elementName: 'Header',
-        typeInfo: '.Header'
+        elementName: 'Body',
+        typeInfo: '.Body'
       }, {
         elementName: 'NotUnderstood',
         typeInfo: '.NotUnderstoodType'
       }, {
-        elementName: 'Envelope',
-        typeInfo: '.Envelope'
+        elementName: 'Upgrade',
+        typeInfo: '.UpgradeType'
+      }, {
+        elementName: 'Header',
+        typeInfo: '.Header'
       }, {
         elementName: 'Fault',
         typeInfo: '.Fault'
       }, {
-        elementName: 'Body',
-        typeInfo: '.Body'
-      }, {
-        elementName: 'Upgrade',
-        typeInfo: '.UpgradeType'
+        elementName: 'Envelope',
+        typeInfo: '.Envelope'
       }]
   };
   return {

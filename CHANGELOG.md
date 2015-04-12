@@ -11,6 +11,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - translate getDocument properties into english
 - update mocha
 - Update JSONIX Docu
+- Update Mappings with new jsonix-schema-compiler
 
 ### Fixed
 - typo in Readme (getDocuments -> getDocument)

@@ -3,64 +3,7 @@ var OGD_Request_Module_Factory = function () {
     name: 'OGD_Request',
     defaultElementNamespaceURI: 'http:\/\/ris.bka.gv.at\/Search\/1.3\/OGD',
     typeInfos: [{
-        localName: 'BundesnormenSortExpression',
-        propertyInfos: [{
-            name: 'sortDirection',
-            elementName: 'SortDirection'
-          }, {
-            name: 'sortedByColumn',
-            elementName: 'SortedByColumn'
-          }]
-      }, {
-        localName: 'BooleanSearchExpression',
-        baseTypeInfo: '.SearchExpression',
-        propertyInfos: [{
-            name: 'expressions',
-            elementName: 'Expressions',
-            typeInfo: '.ArrayOfSearchExpression'
-          }]
-      }, {
-        localName: 'ArrayOfSearchExpression',
-        propertyInfos: [{
-            name: 'searchExpression',
-            collection: true,
-            elementName: 'SearchExpression',
-            typeInfo: '.SearchExpression'
-          }]
-      }, {
-        localName: 'SearchExpression'
-      }, {
-        localName: 'NormabschnittSucheinschraenkung',
-        propertyInfos: [{
-            name: 'nummerVon',
-            elementName: 'NummerVon',
-            typeInfo: 'Int'
-          }, {
-            name: 'buchstabeVon',
-            elementName: 'BuchstabeVon'
-          }, {
-            name: 'nummerBis',
-            elementName: 'NummerBis',
-            typeInfo: 'Int'
-          }, {
-            name: 'buchstabeBis',
-            elementName: 'BuchstabeBis'
-          }, {
-            name: 'typ',
-            elementName: 'Typ'
-          }]
-      }, {
-        localName: 'PhraseSearchExpression',
-        baseTypeInfo: '.SearchExpression',
-        propertyInfos: [{
-            name: 'value',
-            elementName: 'Value'
-          }]
-      }, {
         localName: 'OrSearchExpression',
-        baseTypeInfo: '.BooleanSearchExpression'
-      }, {
-        localName: 'AndSearchExpression',
         baseTypeInfo: '.BooleanSearchExpression'
       }, {
         localName: 'NotSearchExpression',
@@ -71,19 +14,28 @@ var OGD_Request_Module_Factory = function () {
             typeInfo: '.SearchExpression'
           }]
       }, {
+        localName: 'BooleanSearchExpression',
+        baseTypeInfo: '.SearchExpression',
+        propertyInfos: [{
+            name: 'expressions',
+            elementName: 'Expressions',
+            typeInfo: '.ArrayOfSearchExpression'
+          }]
+      }, {
         localName: 'TOGDSearchRequest',
+        typeName: 'T_OGDSearchRequest',
         propertyInfos: [{
             name: 'suchworte',
             elementName: 'Suchworte',
-            typeInfo: '.PhraseSearchExpression' // SearchExpression
+            typeInfo: '.SearchExpression'
           }, {
             name: 'titel',
             elementName: 'Titel',
-            typeInfo: '.PhraseSearchExpression' // SearchExpression
+            typeInfo: '.SearchExpression'
           }, {
             name: 'index',
             elementName: 'Index',
-            typeInfo: '.PhraseSearchExpression' // SearchExpression
+            typeInfo: '.SearchExpression'
           }, {
             name: 'abschnitt',
             elementName: 'Abschnitt',
@@ -116,6 +68,45 @@ var OGD_Request_Module_Factory = function () {
             typeInfo: '.BundesnormenSortExpression'
           }]
       }, {
+        localName: 'BundesnormenSortExpression',
+        propertyInfos: [{
+            name: 'sortDirection',
+            elementName: 'SortDirection'
+          }, {
+            name: 'sortedByColumn',
+            elementName: 'SortedByColumn'
+          }]
+      }, {
+        localName: 'ArrayOfSearchExpression',
+        propertyInfos: [{
+            name: 'searchExpression',
+            collection: true,
+            elementName: 'SearchExpression',
+            typeInfo: '.SearchExpression'
+          }]
+      }, {
+        localName: 'SearchExpression'
+      }, {
+        localName: 'NormabschnittSucheinschraenkung',
+        propertyInfos: [{
+            name: 'nummerVon',
+            elementName: 'NummerVon',
+            typeInfo: 'Int'
+          }, {
+            name: 'buchstabeVon',
+            elementName: 'BuchstabeVon'
+          }, {
+            name: 'nummerBis',
+            elementName: 'NummerBis',
+            typeInfo: 'Int'
+          }, {
+            name: 'buchstabeBis',
+            elementName: 'BuchstabeBis'
+          }, {
+            name: 'typ',
+            elementName: 'Typ'
+          }]
+      }, {
         localName: 'TermSearchExpression',
         baseTypeInfo: '.SearchExpression',
         propertyInfos: [{
@@ -123,9 +114,15 @@ var OGD_Request_Module_Factory = function () {
             elementName: 'Value'
           }]
       }, {
-        type: 'enumInfo',
-        localName: 'ChangeSetInterval',
-        values: ['Undefined', 'EinerWoche', 'ZweiWochen', 'EinemMonat', 'DreiMonaten', 'SechsMonaten', 'EinemJahr']
+        localName: 'PhraseSearchExpression',
+        baseTypeInfo: '.SearchExpression',
+        propertyInfos: [{
+            name: 'value',
+            elementName: 'Value'
+          }]
+      }, {
+        localName: 'AndSearchExpression',
+        baseTypeInfo: '.BooleanSearchExpression'
       }, {
         type: 'enumInfo',
         localName: 'BundesnormenSortableColumn',
@@ -136,12 +133,16 @@ var OGD_Request_Module_Factory = function () {
         values: ['Ascending', 'Descending']
       }, {
         type: 'enumInfo',
-        localName: 'PageSize',
-        values: ['Ten', 'Twenty', 'Fifty', 'OneHundred']
+        localName: 'ChangeSetInterval',
+        values: ['Undefined', 'EinerWoche', 'ZweiWochen', 'EinemMonat', 'DreiMonaten', 'SechsMonaten', 'EinemJahr']
       }, {
         type: 'enumInfo',
         localName: 'NormabschnittTyp',
         values: ['Alle', 'Artikel', 'Paragraph', 'Anlage']
+      }, {
+        type: 'enumInfo',
+        localName: 'PageSize',
+        values: ['Ten', 'Twenty', 'Fifty', 'OneHundred']
       }],
     elementInfos: [{
         elementName: 'OGDSearchRequest',
