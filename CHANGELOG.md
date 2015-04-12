@@ -13,6 +13,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Update JSONIX Docu
 - Update Mappings with new jsonix-schema-compiler
 - Update jsonix
+- Update searchDocuments for new jsonix version
 
 ### Fixed
 - typo in Readme (getDocuments -> getDocument)
