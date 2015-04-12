@@ -20,6 +20,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 - typo in Readme (getDocuments -> getDocument)
 - wrong "no error in raw" calls
+- searchQuery.section parsing
 
 
 ## [0.3.1] - 2015-04-06
