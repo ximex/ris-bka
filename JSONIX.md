@@ -3,11 +3,13 @@
 ## Generate Mappings
 To generate mapping schemas, execute the following command with an custom mapping-name and URL to XSD file
 ```bash
-$ java -jar node_modules/jsonix/lib/jsonix-schema-compiler-full.jar -d mappings -p OGD_MappingName http://text.example.url/path/to/file.xsd
+$ java -jar node_modules/jsonix-schema-compiler/lib/jsonix-schema-compiler-full.jar -d mappings -p OGD_MappingName http://text.example.url/path/to/file.xsd
 ```
 Generates mappings for the `http://text.example.url/path/to/file.xsd` schema in the `mappings\OGD_MappingName.js`; mappings will be placed in the variable `OGD_MappingName`.
 
 ### URLs
+- SOAP Envelope
+  - http://www.w3.org/2003/05/soap-envelope/
 - Abfrage (request)
   - http://data.bka.gv.at/RIS/XSD/OGD_Request.xsd
 - Ergebnis (request)

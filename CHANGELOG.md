@@ -10,6 +10,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - translate searchDocuments properties into english
 - translate getDocument properties into english
 - update mocha
+- Update JSONIX Docu
 
 ### Fixed
 - typo in Readme (getDocuments -> getDocument)
