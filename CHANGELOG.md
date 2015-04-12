@@ -16,6 +16,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Update searchDocuments for new jsonix version
 - Refactor lib names
 - module tests should require their module
+- throw Error if searchQuery is missing
 
 ### Fixed
 - typo in Readme (getDocuments -> getDocument)
