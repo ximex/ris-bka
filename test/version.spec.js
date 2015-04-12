@@ -2,7 +2,7 @@
 
 let should = require('should');
 
-let RisBka = require('../lib/index.js');
+let RisBka = require('../lib/index');
 
 describe('RisBka', function () {
   describe('.getVersion(cbOk, cbFail)', function () {

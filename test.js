@@ -1,12 +1,12 @@
 'use strict';
 
-var RisBka = require('./lib/index.js');
+var RisBka = require('./lib/index');
 
 // Query for searchDocuments
 var query = {
-  searchTerms: '', // PhraseSearchExpression
-  title: '', // PhraseSearchExpression
-  index: '', // PhraseSearchExpression
+  searchTerms: '', // PhraseSearchExpression (SearchExpression)
+  title: '', // PhraseSearchExpression (SearchExpression)
+  index: '', // PhraseSearchExpression (SearchExpression)
   section: {
     number: {
       start: 1,
