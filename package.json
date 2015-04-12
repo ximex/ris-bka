@@ -32,7 +32,7 @@
   "bugs": "https://github.com/ximex/ris-bka/issues",
   "license": "MIT",
   "dependencies": {
-    "jsonix": "2.1.4",
+    "jsonix": "^2.2.1",
     "request": "^2.55.0"
   },
   "devDependencies": {

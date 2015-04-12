@@ -12,6 +12,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - update mocha
 - Update JSONIX Docu
 - Update Mappings with new jsonix-schema-compiler
+- Update jsonix
 
 ### Fixed
 - typo in Readme (getDocuments -> getDocument)
