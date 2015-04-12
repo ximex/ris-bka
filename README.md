@@ -49,9 +49,9 @@ var RisBka = require('ris-bka');
 #### Query
 ```javascript
 {
-  searchTerms: '', // PhraseSearchExpression (SearchExpression)
-  title: '', // PhraseSearchExpression (SearchExpression)
-  index: '', // PhraseSearchExpression (SearchExpression)
+  searchTerms: {}, // SearchExpression
+  title: {}, // SearchExpression
+  index: {}, // SearchExpression
   section: {
     number: {
       start: 1, // Start-Number (Integer)
@@ -79,8 +79,6 @@ var RisBka = require('ris-bka');
 ```
 
 ##### SearchExpression
-**NOT IMPLEMENTED YET**
-
 `{}` represents a search expression
 ```javascript
 // AND
@@ -92,17 +90,20 @@ var RisBka = require('ris-bka');
   or: [{}, ...]
 }
 // NOT
-{
-  not: {}
-}
+// NOT IMPLEMENTED YET!!!
+//{
+//  not: {}
+//}
 // MASK
 {
-  mask: {}
+  mask: 'SearchString' // automatically gets '*' attached -> 'SearchString*'
 }
 // VALUE
 {
   value: 'SearchString'
 }
+// SHORTCUT
+'SearchString' // Same as VALUE
 ```
 
 #### soapBody

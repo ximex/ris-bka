@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased][unreleased]
 ### Added
 - jsonix-schema-compiler as dev-dependency
+- Support SearchExpressions (without NotSearchExpression)
 
 ### Changed
 - translate searchDocuments properties into english
