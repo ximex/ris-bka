@@ -49,9 +49,9 @@ var RisBka = require('ris-bka');
 #### Query
 ```javascript
 {
-  searchTerms: '', // PhraseSearchExpression
-  title: '', // PhraseSearchExpression
-  index: '', // PhraseSearchExpression
+  searchTerms: '', // PhraseSearchExpression (SearchExpression)
+  title: '', // PhraseSearchExpression (SearchExpression)
+  index: '', // PhraseSearchExpression (SearchExpression)
   section: {
     number: {
       start: 1, // Start-Number (Integer)
