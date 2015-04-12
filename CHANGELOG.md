@@ -15,9 +15,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Update jsonix
 - Update searchDocuments for new jsonix version
 - Refactor lib names
+- module tests should require their module
 
 ### Fixed
 - typo in Readme (getDocuments -> getDocument)
+- wrong "no error in raw" calls
 
 
 ## [0.3.1] - 2015-04-06
