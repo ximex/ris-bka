@@ -8,9 +8,9 @@ describe('RisBka', function () {
   describe('.searchDocuments(query, cbOk, cbFail)', function () {
 
     let query = {
-      searchTerms: '', // PhraseSearchExpression
-      title: '', // PhraseSearchExpression
-      index: '', // PhraseSearchExpression
+      searchTerms: '', // PhraseSearchExpression (SearchExpression)
+      title: '', // PhraseSearchExpression (SearchExpression)
+      index: '', // PhraseSearchExpression (SearchExpression)
       section: {
         number: {
           start: 1,
