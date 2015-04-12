@@ -36,6 +36,7 @@
     "request": "^2.55.0"
   },
   "devDependencies": {
+    "jsonix-schema-compiler": "^2.3.3",
     "mocha": "^2.2.4",
     "should": "^5.2.0"
   },
