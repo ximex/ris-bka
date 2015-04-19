@@ -38,7 +38,7 @@
   "devDependencies": {
     "jsonix-schema-compiler": "^2.3.3",
     "mocha": "^2.2.4",
-    "should": "^5.2.0"
+    "should": "^6.0.1"
   },
   "scripts": {
     "test": "mocha --harmony test/"
